@@ -11,6 +11,7 @@
   --color-app-bg: hsl(270, 20%, 96%);
   --color-submit-bg: hsl(271, 36%, 24%);
   --color-radio-outline: hsl(289, 100%, 72%);
+  --color-chat-incoming-bg: #ede5f3;
 
   --fw-1: 400;
   --fw-2: 500;
@@ -20,7 +21,7 @@
   --fs-body: 1rem;
   --fs-chat-price: 0.8rem;
   --fs-name: 0.7rem;
-  --fs-chat-message: 0.55rem;
+  --fs-chat-message: 0.525rem;
 
   --line-height-body: 1.55rem;
 }
@@ -35,4 +36,212 @@
 
 html {
   font-family: "Rubik", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-app-bg);
+}
+
+.main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  gap: 14rem;
+}
+
+.illustration {
+  display: flex;
+  justify-content: end;
+}
+
+.phone {
+  background-color: white;
+  width: 15.5rem;
+  height: 31.5rem;
+  border-radius: 2rem;
+  font-size: var(--fs-chat-message);
+  padding: 0.6rem;
+  position: relative;
+  box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+.phone::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 55%;
+  background-color: white;
+  height: 1.6rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 1rem 1rem;
+  z-index: 2;
+}
+
+/*PHONE HEADER STYLING */
+.phone__header {
+  background: linear-gradient(to left, var(--color-gradient-magenta), var(--color-gradient-violet));
+  padding: 1rem;
+  padding-top: 1.75rem;
+  padding-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1.4rem 1.4rem 0.5rem 0.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.back-btn {
+  width: 0.1rem;
+  height: 0.5rem;
+  background-color: var(--color-white);
+  margin-right: 0.85rem;
+}
+
+.profile-img {
+  width: 1.5rem;
+  border-radius: 100%;
+  border: 2px solid var(--color-white);
+  margin-right: 0.5rem;
+}
+
+.profile__name {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-3);
+  color: var(--color-white);
+}
+
+.options-btn {
+  width: 0.1rem;
+  height: 0.5rem;
+  background-color: var(--color-white);
+  margin-left: auto;
+}
+
+.profile__availability {
+  color: var(--color-sub-heading);
+}
+
+/* CHAT STYLING */
+.phone__chat {
+  background-color: var(--color-app-bg);
+  padding: 0.5rem;
+  padding-top: 0.75rem;
+  position: relative;
+  top: -0.25rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+
+.message {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  max-width: 62%;
+  font-size: var(--fs-chat-message);
+}
+
+.message-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.message-group--incoming {
+  align-self: start;
+}
+
+.message-group--incoming > .message {
+  color: var(--color-left-chat);
+  background-color: var(--color-chat-incoming-bg);
+}
+
+.message-group--sent {
+  align-items: flex-end;
+  align-self: end;
+}
+
+.message-group--sent > .message {
+  color: var(--color-right-chat);
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 65%;
+  gap: 0.5rem;
+}
+
+.photos img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.offer {
+  background: linear-gradient(to right, var(--color-gradient-magenta), var(--color-gradient-violet));
+  max-width: 75%;
+  padding: 0.5rem 0.5rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  border-radius: 0.5rem;
+}
+
+.offer__radio {
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: transparent;
+  border: 1px solid var(--color-radio-outline);
+  border-radius: 100%;
+  margin-right: 0.5rem;
+}
+
+.offer__price {
+  font-weight: var(--fw-3);
+  font-size: var(--fs-chat-price);
+  margin-left: auto;
+}
+
+.input {
+  background-color: var(--color-white);
+  padding: 0.75rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.input__text {
+  color: var(--color-placeholder-text);
+}
+
+.input__btn {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  background-color: var(--color-submit-bg);
+  border-radius: 100%;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* BODY STYLING*/
+.body__heading {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-2);
+  color: var(--color-main-heading);
+  margin-bottom: 1.5rem;
+}
+
+.body__paragraph {
+  font-size: var(--fs-body);
+  line-height: var(--line-height-body);
+  color: var(--color-paragraph);
+  max-width: 28rem;
 }
