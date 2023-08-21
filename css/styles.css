@@ -1,0 +1,38 @@
+:root {
+  --color-sub-heading: hsl(276, 100%, 81%);
+  --color-left-chat: hsl(276, 55%, 52%);
+  --color-right-chat: hsl(271, 15%, 43%);
+  --color-placeholder-text: hsl(206, 6%, 79%);
+  --color-main-heading: hsl(271, 36%, 24%);
+  --color-paragraph: hsl(270, 7%, 64%);
+  --color-gradient-magenta: hsl(293, 100%, 63%);
+  --color-gradient-violet: hsl(264, 100%, 61%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-app-bg: hsl(270, 20%, 96%);
+  --color-submit-bg: hsl(271, 36%, 24%);
+  --color-radio-outline: hsl(289, 100%, 72%);
+
+  --fw-1: 400;
+  --fw-2: 500;
+  --fw-3: 700;
+
+  --fs-heading: 2.6rem;
+  --fs-body: 1rem;
+  --fs-chat-price: 0.8rem;
+  --fs-name: 0.7rem;
+  --fs-chat-message: 0.55rem;
+
+  --line-height-body: 1.55rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+}
