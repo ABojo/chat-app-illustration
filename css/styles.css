@@ -79,9 +79,9 @@ body {
   display: block;
   position: absolute;
   z-index: -1;
-  height: 87vh;
+  height: 50rem;
   width: 30rem;
-  top: -10rem;
+  top: -20rem;
   left: -26.5rem;
   background: linear-gradient(to bottom left, var(--color-gradient-magenta), var(--color-gradient-violet));
   border-radius: 0 0 15rem 15rem;
@@ -317,9 +317,9 @@ body {
   display: block;
   position: absolute;
   z-index: -1;
-  height: 87vh;
+  height: 50rem;
   width: 30rem;
-  bottom: -20rem;
+  bottom: -30rem;
   left: 23.5rem;
   background-color: var(--color-chat-incoming-bg);
   border-radius: 15rem 15rem 0 0;
