@@ -335,3 +335,45 @@ body {
   color: var(--color-paragraph);
   max-width: 28rem;
 }
+
+/* 800 px */
+@media (max-width: 50em) {
+  .main {
+    padding-block: 3rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .illustration {
+    justify-self: center;
+  }
+
+  .phone {
+    margin: 0;
+    justify-self: center;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .body__paragraph {
+    margin: 0 auto;
+  }
+
+  .body__bg {
+    display: none;
+  }
+}
+
+/* 500px */
+@media (max-width: 31.25em) {
+  .phone__bg {
+    left: -22.5rem;
+  }
+}
