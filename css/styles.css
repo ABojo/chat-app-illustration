@@ -43,6 +43,11 @@ body {
   background-color: var(--color-app-bg);
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .main {
   min-height: 100vh;
   display: grid;
@@ -50,6 +55,7 @@ body {
   align-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .illustration {
@@ -66,6 +72,19 @@ body {
   position: relative;
   box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.25);
   margin-right: 5.9rem;
+}
+
+.phone__bg {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 87vh;
+  width: 30rem;
+  top: -10rem;
+  left: -26.5rem;
+  background: linear-gradient(to bottom left, var(--color-gradient-magenta), var(--color-gradient-violet));
+  border-radius: 0 0 15rem 15rem;
 }
 
 .phone::after {
@@ -284,6 +303,25 @@ body {
 }
 
 /* BODY STYLING*/
+
+.body {
+  position: relative;
+}
+
+.body__bg {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 87vh;
+  width: 30rem;
+  bottom: -20rem;
+  left: 23.5rem;
+  background-color: var(--color-chat-incoming-bg);
+  border-radius: 15rem 15rem 0 0;
+  opacity: 0.5;
+}
+
 .body__heading {
   font-size: var(--fs-heading);
   font-weight: var(--fw-2);
